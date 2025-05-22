@@ -1,5 +1,6 @@
 const bitcoinCountElement = document.getElementById('bitcoin-count');
 const clickButton = document.getElementById('click-button');
+const leaderboardButton = document.getElementById('leaderboard-button'); // Get the new button
 
 // Click Power Elements
 const buyClickPowerButton = document.getElementById('buy-click-power');
@@ -240,24 +241,29 @@ function playSound(buffer) {
 // --- Game Logic ---
 
 function formatNumber(num) {
-    if (num >= 1000000000000000) { // Quadrillion
-        return (num / 1000000000000000).toFixed(2).replace(/\.00$/, '') + 'Q';
+    if (num >= 1e18) { // Quintillion (E)
+        return (num / 1e18).toFixed(2).replace(/\.00$/, '') + 'E';
     }
-    if (num >= 1000000000000) { // Trillion
-        return (num / 1000000000000).toFixed(2).replace(/\.00$/, '') + 'T';
+    if (num >= 1e15) { // Quadrillion (P) - Often Q used, using P for peta
+        return (num / 1e15).toFixed(2).replace(/\.00$/, '') + 'P';
     }
-    if (num >= 1000000000) { // Billion
-        return (num / 1000000000).toFixed(2).replace(/\.00$/, '') + 'B';
+    if (num >= 1e12) { // Trillion (T)
+        return (num / 1e12).toFixed(2).replace(/\.00$/, '') + 'T';
     }
-    if (num >= 1000000) { // Million
-        return (num / 1000000).toFixed(2).replace(/\.00$/, '') + 'M';
+    if (num >= 1e9) { // Billion (G) - Often B used, using G for giga
+        return (num / 1e9).toFixed(2).replace(/\.00$/, '') + 'G';
     }
-    if (num >= 1000) { // Thousand
-        return (num / 1000).toFixed(2).replace(/\.00$/, '') + 'K';
+    if (num >= 1e6) { // Million (M)
+        return (num / 1e6).toFixed(2).replace(/\.00$/, '') + 'M';
+    }
+    if (num >= 1e3) { // Thousand (K)
+        return (num / 1e3).toFixed(2).replace(/\.00$/, '') + 'K';
     }
      // For numbers less than 1000, show decimals only if necessary, but generally aim for whole numbers for low counts
     if (num % 1 !== 0) { // Has decimal places
-        return num.toFixed(2);
+        // Limit decimal places for smaller numbers too if needed
+        if (num < 100) return num.toFixed(2);
+        if (num < 1000) return num.toFixed(1);
     }
     return num.toFixed(0); // Show whole numbers
 }
