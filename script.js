@@ -720,5 +720,14 @@ setInterval(() => {
     }
 }, 100); // Update 10 times per second for smoother income display
 
+const leaderboardOverlay = document.getElementById('leaderboard-overlay');
+leaderboardButton.addEventListener('click', () => {
+    if (leaderboardOverlay.style.display === 'flex') {
+        leaderboardOverlay.style.display = 'none';
+    } else {
+        leaderboardOverlay.style.display = 'flex';
+    }
+});
+
 // --- Initial Setup ---
 updateDisplay(); // Set initial values on load

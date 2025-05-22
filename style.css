@@ -50,6 +50,23 @@ body {
     box-shadow: none; /* Remove shadow on click */
 }
 
+#leaderboard-overlay {
+    /* position: relative; Removed as leaderboard is now outside */
+    background-color: #fff;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 4px solid #333;
+    z-index: 2; /* Ensure it's above the background, below fixed elements */
+}
+
+#leaderboard-content {
+    background: #fff;
+    text-align: center;
+}
+
 h1 {
     color: #f7931a; /* Bitcoin orange */
     text-shadow: 2px 2px #333;
