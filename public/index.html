@@ -1,0 +1,143 @@
+<html>
+<head>
+    <title>Bitcoin Clicker Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button id="leaderboard-button">Leaderboard</button> 
+
+    <div id="game-container">
+        <h1>Bitcoin Clicker</h1>
+        <div id="score-container">
+            <img src="bitcoin.png" alt="Bitcoin" id="bitcoin-logo">
+            <span id="bitcoin-count">0</span> BTC
+        </div>
+        <button id="click-button">Mine Bitcoin!</button>
+        <div id="upgrades-container">
+            <h2>Upgrades</h2>
+            <div class="upgrade" id="click-power-upgrade">
+                <h3>Click Power <span id="click-power-level">(Level 1)</span></h3>
+                <p>Generates <span id="click-power-rate">1</span> BTC/click</p>
+                <button id="buy-click-power">Buy (Cost: <span id="click-power-cost">25</span> BTC)</button>
+            </div>
+            <div class="upgrade" id="basic-miner-upgrade">
+                <h3>Basic Miner <span id="basic-miner-level">(Level 0)</span></h3>
+                <p>Generates <span id="basic-miner-rate">0</span> BTC/sec</p>
+                <button id="buy-basic-miner">Buy (Cost: <span id="basic-miner-cost">10</span> BTC)</button>
+            </div>
+            <!-- New Reinforced Miner Upgrade -->
+            <div class="upgrade" id="reinforced-miner-upgrade">
+                <h3>Reinforced Miner <span id="reinforced-miner-level">(Level 0)</span></h3>
+                <p>Generates <span id="reinforced-miner-rate">0</span> BTC/sec</p>
+                <button id="buy-reinforced-miner">Buy (Cost: <span id="reinforced-miner-cost">200</span> BTC)</button>
+            </div>
+            <!-- New Charged Miner Upgrade -->
+            <div class="upgrade" id="charged-miner-upgrade">
+                <h3>Charged Miner <span id="charged-miner-level">(Level 0)</span></h3>
+                <p>Generates <span id="charged-miner-rate">0</span> BTC/sec</p>
+                <button id="buy-charged-miner">Buy (Cost: <span id="charged-miner-cost">2000</span> BTC)</button>
+            </div>
+            <!-- New Laser Miner Upgrade -->
+            <div class="upgrade" id="laser-miner-upgrade">
+                <h3>Laser Miner <span id="laser-miner-level">(Level 0)</span></h3>
+                <p>Generates <span id="laser-miner-rate">0</span> BTC/sec</p>
+                <button id="buy-laser-miner">Buy (Cost: <span id="laser-miner-cost">20000</span> BTC)</button>
+            </div>
+            <!-- New Thermal Miner Upgrade -->
+            <div class="upgrade" id="thermal-miner-upgrade">
+                <h3>Thermal Miner <span id="thermal-miner-level">(Level 0)</span></h3>
+                <p>Generates <span id="thermal-miner-rate">0</span> BTC/sec</p>
+                <button id="buy-thermal-miner">Buy (Cost: <span id="thermal-miner-cost">200000</span> BTC)</button>
+            </div>
+            <!-- New Surge Miner Upgrade -->
+            <div class="upgrade" id="surge-miner-upgrade">
+                <h3>Surge Miner <span id="surge-miner-level">(Level 0)</span></h3>
+                <p>Generates <span id="surge-miner-rate">0</span> BTC/sec</p>
+                <button id="buy-surge-miner">Buy (Cost: <span id="surge-miner-cost">1200000</span> BTC)</button>
+            </div>
+            <!-- New Plasma Miner Upgrade -->
+            <div class="upgrade" id="plasma-miner-upgrade">
+                <h3>Plasma Miner <span id="plasma-miner-level">(Level 0)</span></h3>
+                <p>Generates <span id="plasma-miner-rate">0</span> BTC/sec</p>
+                <button id="buy-plasma-miner">Buy (Cost: <span id="plasma-miner-cost">7200000</span> BTC)</button>
+            </div>
+            <!-- New Nova Miner Upgrade -->
+            <div class="upgrade" id="nova-miner-upgrade">
+                <h3>Nova Miner <span id="nova-miner-level">(Level 0)</span></h3>
+                <p>Generates <span id="nova-miner-rate">0</span> BTC/sec</p>
+                <button id="buy-nova-miner">Buy (Cost: <span id="nova-miner-cost">43200000</span> BTC)</button>
+            </div>
+            <!-- New Quantum Miner Upgrade -->
+            <div class="upgrade" id="quantum-miner-upgrade">
+                <h3>Quantum Miner <span id="quantum-miner-level">(Level 0)</span></h3>
+                <p>Generates <span id="quantum-miner-rate">0</span> BTC/sec</p>
+                <button id="buy-quantum-miner">Buy (Cost: <span id="quantum-miner-cost">259200000</span> BTC)</button>
+            </div>
+            <!-- New Voidcore Miner Upgrade -->
+            <div class="upgrade" id="voidcore-miner-upgrade">
+                <h3>Voidcore Miner <span id="voidcore-miner-level">(Level 0)</span></h3>
+                <p>Generates <span id="voidcore-miner-rate">0</span> BTC/sec</p>
+                <button id="buy-voidcore-miner">Buy (Cost: <span id="voidcore-miner-cost">1555200000</span> BTC)</button>
+            </div>
+            <!-- New Singularity Miner Upgrade -->
+            <div class="upgrade" id="singularity-miner-upgrade">
+                <h3>Singularity Miner <span id="singularity-miner-level">(Level 0)</span></h3>
+                <p>Generates <span id="singularity-miner-rate">0</span> BTC/sec</p>
+                <button id="buy-singularity-miner">Buy (Cost: <span id="singularity-miner-cost">9331200000</span> BTC)</button>
+            </div>
+            <!-- New Infinity Miner Upgrade -->
+            <div class="upgrade" id="infinity-miner-upgrade">
+                <h3>Infinity Miner <span id="infinity-miner-level">(Level 0)</span></h3>
+                <p>Generates <span id="infinity-miner-rate">0</span> BTC/sec</p>
+                <button id="buy-infinity-miner">Buy (Cost: <span id="infinity-miner-cost">55987200000</span> BTC)</button>
+            </div>
+            <!-- New Oblivion Miner Upgrade -->
+            <div class="upgrade" id="oblivion-miner-upgrade">
+                <h3>Oblivion Miner <span id="oblivion-miner-level">(Level 0)</span></h3>
+                <p>Generates <span id="oblivion-miner-rate">0</span> BTC/sec</p>
+                <button id="buy-oblivion-miner">Buy (Cost: <span id="oblivion-miner-cost">335923200000</span> BTC)</button>
+            </div>
+            <!-- New Hyperion Miner Upgrade -->
+            <div class="upgrade" id="hyperion-miner-upgrade">
+                <h3>Hyperion Miner <span id="hyperion-miner-level">(Level 0)</span></h3>
+                <p>Generates <span id="hyperion-miner-rate">0</span> BTC/sec</p>
+                <button id="buy-hyperion-miner">Buy (Cost: <span id="hyperion-miner-cost">2015539200000</span> BTC)</button>
+            </div>
+            <!-- New Apex Miner Upgrade -->
+            <div class="upgrade" id="apex-miner-upgrade">
+                <h3>Apex Miner <span id="apex-miner-level">(Level 0)</span></h3>
+                <p>Generates <span id="apex-miner-rate">0</span> BTC/sec</p>
+                <button id="buy-apex-miner">Buy (Cost: <span id="apex-miner-cost">12093235200000</span> BTC)</button>
+            </div>
+            <!-- New Celestial Miner Upgrade -->
+            <div class="upgrade" id="celestial-miner-upgrade">
+                <h3>Celestial Miner <span id="celestial-miner-level">(Level 0)</span></h3>
+                <p>Generates <span id="celestial-miner-rate">0</span> BTC/sec</p>
+                <button id="buy-celestial-miner">Buy (Cost: <span id="celestial-miner-cost">72559411200000</span> BTC)</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="leaderboard-overlay" style="display:none;">
+        <div id="leaderboard-content">
+            <h1>Leaderboard</h1>
+            <table id="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                    <!-- Leaderboard entries will be dynamically inserted here -->
+                </tbody>
+            </table>
+            <button id="save-score-button">Save My Score</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
