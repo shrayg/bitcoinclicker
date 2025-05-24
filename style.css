@@ -23,6 +23,8 @@
     z-index: 1; /* Ensure it's above the background, below fixed elements */
 }
 
+
+
 #leaderboard-button {
     /* Position relative to the viewport */
     position: fixed; 

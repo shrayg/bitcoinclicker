@@ -114,103 +114,103 @@ let clickPower = 1; // Starts at 1
 let basicMinerLevel = 0;
 let basicMinerRate = 0;
 let basicMinerCost = 10;
-const basicMinerInitialRate = 0.1 *20;
-const basicMinerRateIncrease = 0.05*20;
+const basicMinerInitialRate = 0.1 *30;
+const basicMinerRateIncrease = 0.05*35;
 
 let clickPowerLevel = 1; // Starts at level 1
 let clickPowerCost = 25;
-const clickPowerIncrease = 0.2*20; // Fixed increase per level
+const clickPowerIncrease = 0.2*40; // Fixed increase per level
 
 let reinforcedMinerLevel = 0;
 let reinforcedMinerRate = 0;
 let reinforcedMinerCost = 200;
-const reinforcedMinerInitialRate = 0.5*20;
-const reinforcedMinerRateIncrease = 0.3*20;
+const reinforcedMinerInitialRate = 0.5*30;
+const reinforcedMinerRateIncrease = 0.3*40;
 
 let chargedMinerLevel = 0;
 let chargedMinerRate = 0;
 let chargedMinerCost = 2000;
 const chargedMinerInitialRate = 2.0*20;
-const chargedMinerRateIncrease = 1.0*20;
+const chargedMinerRateIncrease = 1.0*40;
 
 let laserMinerLevel = 0;
 let laserMinerRate = 0;
 let laserMinerCost = 20000;
 const laserMinerInitialRate = 25.0*20;
-const laserMinerRateIncrease = 10.0*20;
+const laserMinerRateIncrease = 10.0*40;
 
 let thermalMinerLevel = 0;
 let thermalMinerRate = 0;
 let thermalMinerCost = 200000;
 const thermalMinerInitialRate = 250.0*20;
-const thermalMinerRateIncrease = 100.0*20;
+const thermalMinerRateIncrease = 100.0*40;
 
 // New Miner States and Constants
 let surgeMinerLevel = 0;
 let surgeMinerRate = 0;
 let surgeMinerCost = 1200000; // Scaling from Thermal * 6
 const surgeMinerInitialRate = 1000.0*20; // Scaling from Thermal * 4
-const surgeMinerRateIncrease = 100.0; // InitialRate / 10
+const surgeMinerRateIncrease = 100.0*40; // InitialRate / 10
 
 let plasmaMinerLevel = 0;
 let plasmaMinerRate = 0;
 let plasmaMinerCost = 7200000; // Scaling from Surge * 6
 const plasmaMinerInitialRate = 4000.0*20; // Scaling from Surge * 4
-const plasmaMinerRateIncrease = 400.0*20; // InitialRate / 10
+const plasmaMinerRateIncrease = 400.0*40; // InitialRate / 10
 
 let novaMinerLevel = 0;
 let novaMinerRate = 0;
 let novaMinerCost = 43200000; // Scaling from Plasma * 6
 const novaMinerInitialRate = 16000.0*20; // Scaling from Plasma * 4
-const novaMinerRateIncrease = 1600.0*20; // InitialRate / 10
+const novaMinerRateIncrease = 1600.0*40; // InitialRate / 10
 
 let quantumMinerLevel = 0;
 let quantumMinerRate = 0;
 let quantumMinerCost = 259200000; // Scaling from Nova * 6
 const quantumMinerInitialRate = 64000.0*20; // Scaling from Nova * 4
-const quantumMinerRateIncrease = 6400.0*20; // InitialRate / 10
+const quantumMinerRateIncrease = 6400.0*40; // InitialRate / 10
 
 let voidcoreMinerLevel = 0;
 let voidcoreMinerRate = 0;
 let voidcoreMinerCost = 1555200000; // Scaling from Quantum * 6
 const voidcoreMinerInitialRate = 256000.0*20; // Scaling from Quantum * 4
-const voidcoreMinerRateIncrease = 25600.0*20; // InitialRate / 10
+const voidcoreMinerRateIncrease = 25600.0*40; // InitialRate / 10
 
 let singularityMinerLevel = 0;
 let singularityMinerRate = 0;
 let singularityMinerCost = 9331200000; // Scaling from Voidcore * 6
 const singularityMinerInitialRate = 1024000.0*20; // Scaling from Voidcore * 4
-const singularityMinerRateIncrease = 102400.0*20; // InitialRate / 10
+const singularityMinerRateIncrease = 102400.0*40; // InitialRate / 10
 
 let infinityMinerLevel = 0;
 let infinityMinerRate = 0;
 let infinityMinerCost = 55987200000; // Scaling from Singularity * 6
 const infinityMinerInitialRate = 4096000.0*20; // Scaling from Singularity * 4
-const infinityMinerRateIncrease = 409600.0*20; // InitialRate / 10
+const infinityMinerRateIncrease = 409600.0*40; // InitialRate / 10
 
 let oblivionMinerLevel = 0;
 let oblivionMinerRate = 0;
 let oblivionMinerCost = 335923200000; // Scaling from Infinity * 6
 const oblivionMinerInitialRate = 16384000.0*20; // Scaling from Infinity * 4
-const oblivionMinerRateIncrease = 1638400.0*20; // InitialRate / 10
+const oblivionMinerRateIncrease = 1638400.0*40; // InitialRate / 10
 
 let hyperionMinerLevel = 0;
 let hyperionMinerRate = 0;
 let hyperionMinerCost = 2015539200000; // Scaling from Oblivion * 6
 const hyperionMinerInitialRate = 65536000.0*20; // Scaling from Oblivion * 4
-const hyperionMinerRateIncrease = 6553600.0*20; // InitialRate / 10
+const hyperionMinerRateIncrease = 6553600.0*40; // InitialRate / 10
 
 let apexMinerLevel = 0;
 let apexMinerRate = 0;
 let apexMinerCost = 12093235200000; // Scaling from Hyperion * 6
 const apexMinerInitialRate = 262144000.0*20; // Scaling from Hyperion * 4
-const apexMinerRateIncrease = 26214400.0*20; // InitialRate / 10
+const apexMinerRateIncrease = 26214400.0*40; // InitialRate / 10
 
 let celestialMinerLevel = 0;
 let celestialMinerRate = 0;
 let celestialMinerCost = 72559411200000; // Scaling from Apex * 6
 const celestialMinerInitialRate = 1048576000.0*20; // Scaling from Apex * 4
-const celestialMinerRateIncrease = 104857600.0*20; // InitialRate / 10
+const celestialMinerRateIncrease = 104857600.0*40; // InitialRate / 10
 
 // --- Audio ---
 // Use WebAudio API instead of HTML AudioElement
@@ -272,7 +272,8 @@ function formatNumber(num) {
 }
 
 function updateDisplay() {
-    bitcoinCountElement.textContent = formatNumber(bitcoin);
+    bitcoinCountElement.textContent = `${formatNumber(bitcoin)} BTC`;
+
 
     // Update Click Power display
     clickPowerLevelElement.textContent = `(Level ${clickPowerLevel})`;
@@ -480,7 +481,11 @@ function updateDisplay() {
 }
 
 // --- Event Listeners ---
+let lastClickTime = 0;
 clickButton.addEventListener('click', () => {
+    const now = Date.now();
+    if (now - lastClickTime < 50) return; // 0.05 seconds debounce
+    lastClickTime = now;
     bitcoin += clickPower;
     playSound(clickBuffer); // Play click sound
     updateDisplay();
@@ -512,7 +517,7 @@ buyBasicMinerButton.addEventListener('click', () => {
         // Level N = InitialRate + (N - 1) * RateIncrease
         basicMinerRate = basicMinerInitialRate + (basicMinerLevel - 1) * basicMinerRateIncrease;
 
-        basicMinerCost = Math.ceil(basicMinerCost * 1.5); // Increase cost
+        basicMinerCost = Math.ceil(basicMinerCost * 1.1); // Increase cost
         playSound(upgradeBuffer); // Play upgrade sound
         updateDisplay();
     }
@@ -525,7 +530,7 @@ buyReinforcedMinerButton.addEventListener('click', () => {
         // Calculate reinforced miner rate based on level
          reinforcedMinerRate = reinforcedMinerInitialRate + (reinforcedMinerLevel - 1) * reinforcedMinerRateIncrease;
 
-        reinforcedMinerCost = Math.ceil(reinforcedMinerCost * 1.8); // Increase cost
+        reinforcedMinerCost = Math.ceil(reinforcedMinerCost * 1.2); // Increase cost
         playSound(upgradeBuffer); // Play upgrade sound
         updateDisplay();
     }
@@ -538,7 +543,7 @@ buyChargedMinerButton.addEventListener('click', () => {
         // Calculate charged miner rate based on level
         chargedMinerRate = chargedMinerInitialRate + (chargedMinerLevel - 1) * chargedMinerRateIncrease;
 
-        chargedMinerCost = Math.ceil(chargedMinerCost * 1.8); // Increase cost
+        chargedMinerCost = Math.ceil(chargedMinerCost * 1.2); // Increase cost
         playSound(upgradeBuffer); // Play upgrade sound
         updateDisplay();
     }
@@ -551,7 +556,7 @@ buyLaserMinerButton.addEventListener('click', () => {
         // Calculate laser miner rate based on level
         laserMinerRate = laserMinerInitialRate + (laserMinerLevel - 1) * laserMinerRateIncrease;
 
-        laserMinerCost = Math.ceil(laserMinerCost * 1.8); // Increase cost
+        laserMinerCost = Math.ceil(laserMinerCost * 1.2); // Increase cost
         playSound(upgradeBuffer); // Play upgrade sound
         updateDisplay();
     }
@@ -564,7 +569,7 @@ buyThermalMinerButton.addEventListener('click', () => {
         // Calculate thermal miner rate based on level
         thermalMinerRate = thermalMinerInitialRate + (thermalMinerLevel - 1) * thermalMinerRateIncrease;
 
-        thermalMinerCost = Math.ceil(thermalMinerCost * 1.8); // Increase cost
+        thermalMinerCost = Math.ceil(thermalMinerCost * 1.2); // Increase cost
         playSound(upgradeBuffer); // Play upgrade sound
         updateDisplay();
     }
@@ -577,7 +582,7 @@ buySurgeMinerButton.addEventListener('click', () => {
         // Calculate surge miner rate based on level
         surgeMinerRate = surgeMinerInitialRate + (surgeMinerLevel - 1) * surgeMinerRateIncrease;
 
-        surgeMinerCost = Math.ceil(surgeMinerCost * 1.8); // Increase cost
+        surgeMinerCost = Math.ceil(surgeMinerCost * 1.2); // Increase cost
         playSound(upgradeBuffer); // Play upgrade sound
         updateDisplay();
     }
@@ -590,7 +595,7 @@ buyPlasmaMinerButton.addEventListener('click', () => {
         // Calculate plasma miner rate based on level
         plasmaMinerRate = plasmaMinerInitialRate + (plasmaMinerLevel - 1) * plasmaMinerRateIncrease;
 
-        plasmaMinerCost = Math.ceil(plasmaMinerCost * 1.8); // Increase cost
+        plasmaMinerCost = Math.ceil(plasmaMinerCost * 1.2); // Increase cost
         playSound(upgradeBuffer); // Play upgrade sound
         updateDisplay();
     }
@@ -603,7 +608,7 @@ buyNovaMinerButton.addEventListener('click', () => {
         // Calculate nova miner rate based on level
         novaMinerRate = novaMinerInitialRate + (novaMinerLevel - 1) * novaMinerRateIncrease;
 
-        novaMinerCost = Math.ceil(novaMinerCost * 1.8); // Increase cost
+        novaMinerCost = Math.ceil(novaMinerCost * 1.2); // Increase cost
         playSound(upgradeBuffer); // Play upgrade sound
         updateDisplay();
     }
@@ -616,7 +621,7 @@ buyQuantumMinerButton.addEventListener('click', () => {
         // Calculate quantum miner rate based on level
         quantumMinerRate = quantumMinerInitialRate + (quantumMinerLevel - 1) * quantumMinerRateIncrease;
 
-        quantumMinerCost = Math.ceil(quantumMinerCost * 1.8); // Increase cost
+        quantumMinerCost = Math.ceil(quantumMinerCost * 1.2); // Increase cost
         playSound(upgradeBuffer); // Play upgrade sound
         updateDisplay();
     }
@@ -629,7 +634,7 @@ buyVoidcoreMinerButton.addEventListener('click', () => {
         // Calculate voidcore miner rate based on level
         voidcoreMinerRate = voidcoreMinerInitialRate + (voidcoreMinerLevel - 1) * voidcoreMinerRateIncrease;
 
-        voidcoreMinerCost = Math.ceil(voidcoreMinerCost * 1.8); // Increase cost
+        voidcoreMinerCost = Math.ceil(voidcoreMinerCost * 1.2); // Increase cost
         playSound(upgradeBuffer); // Play upgrade sound
         updateDisplay();
     }
@@ -642,7 +647,7 @@ buySingularityMinerButton.addEventListener('click', () => {
         // Calculate singularity miner rate based on level
         singularityMinerRate = singularityMinerInitialRate + (singularityMinerLevel - 1) * singularityMinerRateIncrease;
 
-        singularityMinerCost = Math.ceil(singularityMinerCost * 1.8); // Increase cost
+        singularityMinerCost = Math.ceil(singularityMinerCost * 1.2); // Increase cost
         playSound(upgradeBuffer); // Play upgrade sound
         updateDisplay();
     }
@@ -655,7 +660,7 @@ buyInfinityMinerButton.addEventListener('click', () => {
         // Calculate infinity miner rate based on level
         infinityMinerRate = infinityMinerInitialRate + (infinityMinerLevel - 1) * infinityMinerRateIncrease;
 
-        infinityMinerCost = Math.ceil(infinityMinerCost * 1.8); // Increase cost
+        infinityMinerCost = Math.ceil(infinityMinerCost * 1.2); // Increase cost
         playSound(upgradeBuffer); // Play upgrade sound
         updateDisplay();
     }
@@ -668,7 +673,7 @@ buyOblivionMinerButton.addEventListener('click', () => {
         // Calculate oblivion miner rate based on level
         oblivionMinerRate = oblivionMinerInitialRate + (oblivionMinerLevel - 1) * oblivionMinerRateIncrease;
 
-        oblivionMinerCost = Math.ceil(oblivionMinerCost * 1.8); // Increase cost
+        oblivionMinerCost = Math.ceil(oblivionMinerCost * 1.2); // Increase cost
         playSound(upgradeBuffer); // Play upgrade sound
         updateDisplay();
     }
@@ -681,7 +686,7 @@ buyHyperionMinerButton.addEventListener('click', () => {
         // Calculate hyperion miner rate based on level
         hyperionMinerRate = hyperionMinerInitialRate + (hyperionMinerLevel - 1) * hyperionMinerRateIncrease;
 
-        hyperionMinerCost = Math.ceil(hyperionMinerCost * 1.8); // Increase cost
+        hyperionMinerCost = Math.ceil(hyperionMinerCost * 1.2); // Increase cost
         playSound(upgradeBuffer); // Play upgrade sound
         updateDisplay();
     }
@@ -694,7 +699,7 @@ buyApexMinerButton.addEventListener('click', () => {
         // Calculate apex miner rate based on level
         apexMinerRate = apexMinerInitialRate + (apexMinerLevel - 1) * apexMinerRateIncrease;
 
-        apexMinerCost = Math.ceil(apexMinerCost * 1.8); // Increase cost
+        apexMinerCost = Math.ceil(apexMinerCost * 1.2); // Increase cost
         playSound(upgradeBuffer); // Play upgrade sound
         updateDisplay();
     }
@@ -707,7 +712,7 @@ buyCelestialMinerButton.addEventListener('click', () => {
         // Calculate celestial miner rate based on level
         celestialMinerRate = celestialMinerInitialRate + (celestialMinerLevel - 1) * celestialMinerRateIncrease;
 
-        celestialMinerCost = Math.ceil(celestialMinerCost * 1.8); // Increase cost
+        celestialMinerCost = Math.ceil(celestialMinerCost * 1.2); // Increase cost
         playSound(upgradeBuffer); // Play upgrade sound
         updateDisplay();
     }
