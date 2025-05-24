@@ -113,103 +113,104 @@ let clickPower = 1; // Starts at 1
 
 let basicMinerLevel = 0;
 let basicMinerRate = 0;
-const basicMinerInitialRate = 0.1 * 25; // 2.5
-const basicMinerRateIncrease = 0.05 * 25; // 1.25
+let basicMinerCost = 10;
+const basicMinerInitialRate = 0.1 *20;
+const basicMinerRateIncrease = 0.05*20;
 
 let clickPowerLevel = 1; // Starts at level 1
 let clickPowerCost = 25;
-const clickPowerIncrease = 0.2; // Fixed increase per level
+const clickPowerIncrease = 0.2*20; // Fixed increase per level
 
 let reinforcedMinerLevel = 0;
 let reinforcedMinerRate = 0;
 let reinforcedMinerCost = 200;
-const reinforcedMinerInitialRate = 0.5 * 25; // 12.5
-const reinforcedMinerRateIncrease = 0.3 * 25; // 7.5
+const reinforcedMinerInitialRate = 0.5*20;
+const reinforcedMinerRateIncrease = 0.3*20;
 
 let chargedMinerLevel = 0;
 let chargedMinerRate = 0;
 let chargedMinerCost = 2000;
-const chargedMinerInitialRate = 2.0 * 25; // 50
-const chargedMinerRateIncrease = 1.0 * 25; // 25
+const chargedMinerInitialRate = 2.0*20;
+const chargedMinerRateIncrease = 1.0*20;
 
 let laserMinerLevel = 0;
 let laserMinerRate = 0;
 let laserMinerCost = 20000;
-const laserMinerInitialRate = 25.0 * 25; // 625
-const laserMinerRateIncrease = 10.0 * 25; // 250
+const laserMinerInitialRate = 25.0*20;
+const laserMinerRateIncrease = 10.0*20;
 
 let thermalMinerLevel = 0;
 let thermalMinerRate = 0;
 let thermalMinerCost = 200000;
-const thermalMinerInitialRate = 250.0 * 25; // 6250
-const thermalMinerRateIncrease = 100.0 * 25; // 2500
+const thermalMinerInitialRate = 250.0*20;
+const thermalMinerRateIncrease = 100.0*20;
 
 // New Miner States and Constants
 let surgeMinerLevel = 0;
 let surgeMinerRate = 0;
 let surgeMinerCost = 1200000; // Scaling from Thermal * 6
-const surgeMinerInitialRate = 1000.0 * 25; // 25000
-const surgeMinerRateIncrease = 100.0 * 25; // 2500
+const surgeMinerInitialRate = 1000.0*20; // Scaling from Thermal * 4
+const surgeMinerRateIncrease = 100.0; // InitialRate / 10
 
 let plasmaMinerLevel = 0;
 let plasmaMinerRate = 0;
 let plasmaMinerCost = 7200000; // Scaling from Surge * 6
-const plasmaMinerInitialRate = 4000.0 * 25; // 100000
-const plasmaMinerRateIncrease = 400.0 * 25; // 10000
+const plasmaMinerInitialRate = 4000.0*20; // Scaling from Surge * 4
+const plasmaMinerRateIncrease = 400.0*20; // InitialRate / 10
 
 let novaMinerLevel = 0;
 let novaMinerRate = 0;
 let novaMinerCost = 43200000; // Scaling from Plasma * 6
-const novaMinerInitialRate = 16000.0 * 25; // 400000
-const novaMinerRateIncrease = 1600.0 * 25; // 40000
+const novaMinerInitialRate = 16000.0*20; // Scaling from Plasma * 4
+const novaMinerRateIncrease = 1600.0*20; // InitialRate / 10
 
 let quantumMinerLevel = 0;
 let quantumMinerRate = 0;
 let quantumMinerCost = 259200000; // Scaling from Nova * 6
-const quantumMinerInitialRate = 64000.0 * 25; // 1600000
-const quantumMinerRateIncrease = 6400.0 * 25; // 160000
+const quantumMinerInitialRate = 64000.0*20; // Scaling from Nova * 4
+const quantumMinerRateIncrease = 6400.0*20; // InitialRate / 10
 
 let voidcoreMinerLevel = 0;
 let voidcoreMinerRate = 0;
 let voidcoreMinerCost = 1555200000; // Scaling from Quantum * 6
-const voidcoreMinerInitialRate = 256000.0 * 25; // 6400000
-const voidcoreMinerRateIncrease = 25600.0 * 25; // 640000
+const voidcoreMinerInitialRate = 256000.0*20; // Scaling from Quantum * 4
+const voidcoreMinerRateIncrease = 25600.0*20; // InitialRate / 10
 
 let singularityMinerLevel = 0;
 let singularityMinerRate = 0;
 let singularityMinerCost = 9331200000; // Scaling from Voidcore * 6
-const singularityMinerInitialRate = 1024000.0 * 25; // 25600000
-const singularityMinerRateIncrease = 102400.0 * 25; // 2560000
+const singularityMinerInitialRate = 1024000.0*20; // Scaling from Voidcore * 4
+const singularityMinerRateIncrease = 102400.0*20; // InitialRate / 10
 
 let infinityMinerLevel = 0;
 let infinityMinerRate = 0;
 let infinityMinerCost = 55987200000; // Scaling from Singularity * 6
-const infinityMinerInitialRate = 4096000.0 * 25; // 102400000
-const infinityMinerRateIncrease = 409600.0 * 25; // 10240000
+const infinityMinerInitialRate = 4096000.0*20; // Scaling from Singularity * 4
+const infinityMinerRateIncrease = 409600.0*20; // InitialRate / 10
 
 let oblivionMinerLevel = 0;
 let oblivionMinerRate = 0;
 let oblivionMinerCost = 335923200000; // Scaling from Infinity * 6
-const oblivionMinerInitialRate = 16384000.0 * 25; // 409600000
-const oblivionMinerRateIncrease = 1638400.0 * 25; // 40960000
+const oblivionMinerInitialRate = 16384000.0*20; // Scaling from Infinity * 4
+const oblivionMinerRateIncrease = 1638400.0*20; // InitialRate / 10
 
 let hyperionMinerLevel = 0;
 let hyperionMinerRate = 0;
 let hyperionMinerCost = 2015539200000; // Scaling from Oblivion * 6
-const hyperionMinerInitialRate = 65536000.0 * 25; // 1638400000
-const hyperionMinerRateIncrease = 6553600.0 * 25; // 163840000
+const hyperionMinerInitialRate = 65536000.0*20; // Scaling from Oblivion * 4
+const hyperionMinerRateIncrease = 6553600.0*20; // InitialRate / 10
 
 let apexMinerLevel = 0;
 let apexMinerRate = 0;
 let apexMinerCost = 12093235200000; // Scaling from Hyperion * 6
-const apexMinerInitialRate = 262144000.0 * 25; // 6553600000
-const apexMinerRateIncrease = 26214400.0 * 25; // 655360000
+const apexMinerInitialRate = 262144000.0*20; // Scaling from Hyperion * 4
+const apexMinerRateIncrease = 26214400.0*20; // InitialRate / 10
 
 let celestialMinerLevel = 0;
 let celestialMinerRate = 0;
 let celestialMinerCost = 72559411200000; // Scaling from Apex * 6
-const celestialMinerInitialRate = 1048576000.0 * 25; // 26214400000
-const celestialMinerRateIncrease = 104857600.0 * 25; // 2621440000
+const celestialMinerInitialRate = 1048576000.0*20; // Scaling from Apex * 4
+const celestialMinerRateIncrease = 104857600.0*20; // InitialRate / 10
 
 // --- Audio ---
 // Use WebAudio API instead of HTML AudioElement
