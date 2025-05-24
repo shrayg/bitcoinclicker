@@ -1,3 +1,6 @@
+
+
+
 const bitcoinCountElement = document.getElementById('bitcoin-count');
 const clickButton = document.getElementById('click-button');
 const leaderboardButton = document.getElementById('leaderboard-button'); // Get the new button
@@ -110,9 +113,8 @@ let clickPower = 1; // Starts at 1
 
 let basicMinerLevel = 0;
 let basicMinerRate = 0;
-let basicMinerCost = 10;
-const basicMinerInitialRate = 0.1;
-const basicMinerRateIncrease = 0.05;
+const basicMinerInitialRate = 0.1 * 25; // 2.5
+const basicMinerRateIncrease = 0.05 * 25; // 1.25
 
 let clickPowerLevel = 1; // Starts at level 1
 let clickPowerCost = 25;
@@ -121,93 +123,93 @@ const clickPowerIncrease = 0.2; // Fixed increase per level
 let reinforcedMinerLevel = 0;
 let reinforcedMinerRate = 0;
 let reinforcedMinerCost = 200;
-const reinforcedMinerInitialRate = 0.5;
-const reinforcedMinerRateIncrease = 0.3;
+const reinforcedMinerInitialRate = 0.5 * 25; // 12.5
+const reinforcedMinerRateIncrease = 0.3 * 25; // 7.5
 
 let chargedMinerLevel = 0;
 let chargedMinerRate = 0;
 let chargedMinerCost = 2000;
-const chargedMinerInitialRate = 2.0;
-const chargedMinerRateIncrease = 1.0;
+const chargedMinerInitialRate = 2.0 * 25; // 50
+const chargedMinerRateIncrease = 1.0 * 25; // 25
 
 let laserMinerLevel = 0;
 let laserMinerRate = 0;
 let laserMinerCost = 20000;
-const laserMinerInitialRate = 25.0;
-const laserMinerRateIncrease = 10.0;
+const laserMinerInitialRate = 25.0 * 25; // 625
+const laserMinerRateIncrease = 10.0 * 25; // 250
 
 let thermalMinerLevel = 0;
 let thermalMinerRate = 0;
 let thermalMinerCost = 200000;
-const thermalMinerInitialRate = 250.0;
-const thermalMinerRateIncrease = 100.0;
+const thermalMinerInitialRate = 250.0 * 25; // 6250
+const thermalMinerRateIncrease = 100.0 * 25; // 2500
 
 // New Miner States and Constants
 let surgeMinerLevel = 0;
 let surgeMinerRate = 0;
 let surgeMinerCost = 1200000; // Scaling from Thermal * 6
-const surgeMinerInitialRate = 1000.0; // Scaling from Thermal * 4
-const surgeMinerRateIncrease = 100.0; // InitialRate / 10
+const surgeMinerInitialRate = 1000.0 * 25; // 25000
+const surgeMinerRateIncrease = 100.0 * 25; // 2500
 
 let plasmaMinerLevel = 0;
 let plasmaMinerRate = 0;
 let plasmaMinerCost = 7200000; // Scaling from Surge * 6
-const plasmaMinerInitialRate = 4000.0; // Scaling from Surge * 4
-const plasmaMinerRateIncrease = 400.0; // InitialRate / 10
+const plasmaMinerInitialRate = 4000.0 * 25; // 100000
+const plasmaMinerRateIncrease = 400.0 * 25; // 10000
 
 let novaMinerLevel = 0;
 let novaMinerRate = 0;
 let novaMinerCost = 43200000; // Scaling from Plasma * 6
-const novaMinerInitialRate = 16000.0; // Scaling from Plasma * 4
-const novaMinerRateIncrease = 1600.0; // InitialRate / 10
+const novaMinerInitialRate = 16000.0 * 25; // 400000
+const novaMinerRateIncrease = 1600.0 * 25; // 40000
 
 let quantumMinerLevel = 0;
 let quantumMinerRate = 0;
 let quantumMinerCost = 259200000; // Scaling from Nova * 6
-const quantumMinerInitialRate = 64000.0; // Scaling from Nova * 4
-const quantumMinerRateIncrease = 6400.0; // InitialRate / 10
+const quantumMinerInitialRate = 64000.0 * 25; // 1600000
+const quantumMinerRateIncrease = 6400.0 * 25; // 160000
 
 let voidcoreMinerLevel = 0;
 let voidcoreMinerRate = 0;
 let voidcoreMinerCost = 1555200000; // Scaling from Quantum * 6
-const voidcoreMinerInitialRate = 256000.0; // Scaling from Quantum * 4
-const voidcoreMinerRateIncrease = 25600.0; // InitialRate / 10
+const voidcoreMinerInitialRate = 256000.0 * 25; // 6400000
+const voidcoreMinerRateIncrease = 25600.0 * 25; // 640000
 
 let singularityMinerLevel = 0;
 let singularityMinerRate = 0;
 let singularityMinerCost = 9331200000; // Scaling from Voidcore * 6
-const singularityMinerInitialRate = 1024000.0; // Scaling from Voidcore * 4
-const singularityMinerRateIncrease = 102400.0; // InitialRate / 10
+const singularityMinerInitialRate = 1024000.0 * 25; // 25600000
+const singularityMinerRateIncrease = 102400.0 * 25; // 2560000
 
 let infinityMinerLevel = 0;
 let infinityMinerRate = 0;
 let infinityMinerCost = 55987200000; // Scaling from Singularity * 6
-const infinityMinerInitialRate = 4096000.0; // Scaling from Singularity * 4
-const infinityMinerRateIncrease = 409600.0; // InitialRate / 10
+const infinityMinerInitialRate = 4096000.0 * 25; // 102400000
+const infinityMinerRateIncrease = 409600.0 * 25; // 10240000
 
 let oblivionMinerLevel = 0;
 let oblivionMinerRate = 0;
 let oblivionMinerCost = 335923200000; // Scaling from Infinity * 6
-const oblivionMinerInitialRate = 16384000.0; // Scaling from Infinity * 4
-const oblivionMinerRateIncrease = 1638400.0; // InitialRate / 10
+const oblivionMinerInitialRate = 16384000.0 * 25; // 409600000
+const oblivionMinerRateIncrease = 1638400.0 * 25; // 40960000
 
 let hyperionMinerLevel = 0;
 let hyperionMinerRate = 0;
 let hyperionMinerCost = 2015539200000; // Scaling from Oblivion * 6
-const hyperionMinerInitialRate = 65536000.0; // Scaling from Oblivion * 4
-const hyperionMinerRateIncrease = 6553600.0; // InitialRate / 10
+const hyperionMinerInitialRate = 65536000.0 * 25; // 1638400000
+const hyperionMinerRateIncrease = 6553600.0 * 25; // 163840000
 
 let apexMinerLevel = 0;
 let apexMinerRate = 0;
 let apexMinerCost = 12093235200000; // Scaling from Hyperion * 6
-const apexMinerInitialRate = 262144000.0; // Scaling from Hyperion * 4
-const apexMinerRateIncrease = 26214400.0; // InitialRate / 10
+const apexMinerInitialRate = 262144000.0 * 25; // 6553600000
+const apexMinerRateIncrease = 26214400.0 * 25; // 655360000
 
 let celestialMinerLevel = 0;
 let celestialMinerRate = 0;
 let celestialMinerCost = 72559411200000; // Scaling from Apex * 6
-const celestialMinerInitialRate = 1048576000.0; // Scaling from Apex * 4
-const celestialMinerRateIncrease = 104857600.0; // InitialRate / 10
+const celestialMinerInitialRate = 1048576000.0 * 25; // 26214400000
+const celestialMinerRateIncrease = 104857600.0 * 25; // 2621440000
 
 // --- Audio ---
 // Use WebAudio API instead of HTML AudioElement
@@ -720,14 +722,215 @@ setInterval(() => {
     }
 }, 100); // Update 10 times per second for smoother income display
 
+
+ // Save data
+
+ let playerName = localStorage.getItem('playerName');
+
+if (!playerName) {
+    playerName = prompt('Enter your Name or Twitter or Wallet address:');
+    if (playerName) {
+        localStorage.setItem('playerName', playerName);
+    } else {
+        playerName = 'Anonymous';
+    }
+}
+
+
+function saveGame() {
+    const gameData = {
+        playerName,
+        bitcoin,
+        clickPower,
+        clickPowerLevel,
+        clickPowerCost,
+
+        basicMinerLevel,
+        basicMinerRate,
+        basicMinerCost,
+
+        reinforcedMinerLevel,
+        reinforcedMinerRate,
+        reinforcedMinerCost,
+
+        chargedMinerLevel,
+        chargedMinerRate,
+        chargedMinerCost,
+
+        laserMinerLevel,
+        laserMinerRate,
+        laserMinerCost,
+
+        thermalMinerLevel,
+        thermalMinerRate,
+        thermalMinerCost,
+
+        surgeMinerLevel,
+        surgeMinerRate,
+        surgeMinerCost,
+
+        plasmaMinerLevel,
+        plasmaMinerRate,
+        plasmaMinerCost,
+
+        novaMinerLevel,
+        novaMinerRate,
+        novaMinerCost,
+
+        quantumMinerLevel,
+        quantumMinerRate,
+        quantumMinerCost,
+
+        voidcoreMinerLevel,
+        voidcoreMinerRate,
+        voidcoreMinerCost,
+
+        singularityMinerLevel,
+        singularityMinerRate,
+        singularityMinerCost,
+
+        infinityMinerLevel,
+        infinityMinerRate,
+        infinityMinerCost,
+
+        oblivionMinerLevel,
+        oblivionMinerRate,
+        oblivionMinerCost,
+
+        hyperionMinerLevel,
+        hyperionMinerRate,
+        hyperionMinerCost,
+
+        apexMinerLevel,
+        apexMinerRate,
+        apexMinerCost,
+
+        celestialMinerLevel,
+        celestialMinerRate,
+        celestialMinerCost
+    };
+    localStorage.setItem('btcClickerSave', JSON.stringify(gameData));
+}
+const savedData = JSON.parse(localStorage.getItem('btcClickerSave'));
+
+if (savedData) {
+    bitcoin = savedData.bitcoin || 0;
+    clickPower = savedData.clickPower || 1;
+    clickPowerLevel = savedData.clickPowerLevel || 1;
+    clickPowerCost = savedData.clickPowerCost || 25;
+
+    basicMinerLevel = savedData.basicMinerLevel || 0;
+    basicMinerRate = savedData.basicMinerRate || 0;
+    basicMinerCost = savedData.basicMinerCost || 10;
+
+    reinforcedMinerLevel = savedData.reinforcedMinerLevel || 0;
+    reinforcedMinerRate = savedData.reinforcedMinerRate || 0;
+    reinforcedMinerCost = savedData.reinforcedMinerCost || 200;
+
+    chargedMinerLevel = savedData.chargedMinerLevel || 0;
+    chargedMinerRate = savedData.chargedMinerRate || 0;
+    chargedMinerCost = savedData.chargedMinerCost || 2000;
+
+    laserMinerLevel = savedData.laserMinerLevel || 0;
+    laserMinerRate = savedData.laserMinerRate || 0;
+    laserMinerCost = savedData.laserMinerCost || 20000;
+
+    thermalMinerLevel = savedData.thermalMinerLevel || 0;
+    thermalMinerRate = savedData.thermalMinerRate || 0;
+    thermalMinerCost = savedData.thermalMinerCost || 200000;
+
+    surgeMinerLevel = savedData.surgeMinerLevel || 0;
+    surgeMinerRate = savedData.surgeMinerRate || 0;
+    surgeMinerCost = savedData.surgeMinerCost || 1200000;
+
+    plasmaMinerLevel = savedData.plasmaMinerLevel || 0;
+    plasmaMinerRate = savedData.plasmaMinerRate || 0;
+    plasmaMinerCost = savedData.plasmaMinerCost || 7200000;
+
+    novaMinerLevel = savedData.novaMinerLevel || 0;
+    novaMinerRate = savedData.novaMinerRate || 0;
+    novaMinerCost = savedData.novaMinerCost || 43200000;
+
+    quantumMinerLevel = savedData.quantumMinerLevel || 0;
+    quantumMinerRate = savedData.quantumMinerRate || 0;
+    quantumMinerCost = savedData.quantumMinerCost || 259200000;
+
+    voidcoreMinerLevel = savedData.voidcoreMinerLevel || 0;
+    voidcoreMinerRate = savedData.voidcoreMinerRate || 0;
+    voidcoreMinerCost = savedData.voidcoreMinerCost || 1555200000;
+
+    singularityMinerLevel = savedData.singularityMinerLevel || 0;
+    singularityMinerRate = savedData.singularityMinerRate || 0;
+    singularityMinerCost = savedData.singularityMinerCost || 9331200000;
+
+    infinityMinerLevel = savedData.infinityMinerLevel || 0;
+    infinityMinerRate = savedData.infinityMinerRate || 0;
+    infinityMinerCost = savedData.infinityMinerCost || 55987200000;
+
+    oblivionMinerLevel = savedData.oblivionMinerLevel || 0;
+    oblivionMinerRate = savedData.oblivionMinerRate || 0;
+    oblivionMinerCost = savedData.oblivionMinerCost || 335923200000;
+
+    hyperionMinerLevel = savedData.hyperionMinerLevel || 0;
+    hyperionMinerRate = savedData.hyperionMinerRate || 0;
+    hyperionMinerCost = savedData.hyperionMinerCost || 2015539200000;
+
+    apexMinerLevel = savedData.apexMinerLevel || 0;
+    apexMinerRate = savedData.apexMinerRate || 0;
+    apexMinerCost = savedData.apexMinerCost || 12093235200000;
+
+    celestialMinerLevel = savedData.celestialMinerLevel || 0;
+    celestialMinerRate = savedData.celestialMinerRate || 0;
+    celestialMinerCost = savedData.celestialMinerCost || 72559411200000;
+}
+
+// Save every 10 seconds
+setInterval(saveGame, 10000);
+
+// Also save when they leave the page
+window.addEventListener('beforeunload', saveGame);
+
+
+
+const leaderboardBody = document.getElementById('leaderboard-body');
+const sheetUrl = 'https://opensheet.elk.sh/1kGoNjk4WiRR_iX7zxS983KstxV_IKMIpdj4bPm0jIVA/Sheet1';
+
+async function loadLeaderboard() {
+    try {
+        const response = await fetch(sheetUrl);
+        const data = await response.json();
+
+        // Sort by score descending
+        data.sort((a, b) => parseFloat(b.Score) - parseFloat(a.Score));
+
+        // Clear the table body
+        leaderboardBody.innerHTML = '';
+
+        data.forEach((entry, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${entry.Player}</td>
+                <td>${Number(entry.Score).toLocaleString()}</td>
+            `;
+            leaderboardBody.appendChild(row);
+        });
+    } catch (err) {
+        console.error('Failed to load leaderboard:', err);
+    }
+}
+
 const leaderboardOverlay = document.getElementById('leaderboard-overlay');
 leaderboardButton.addEventListener('click', () => {
     if (leaderboardOverlay.style.display === 'flex') {
         leaderboardOverlay.style.display = 'none';
     } else {
+        
+        loadLeaderboard();
         leaderboardOverlay.style.display = 'flex';
     }
 });
+
 
 // --- Initial Setup ---
 updateDisplay(); // Set initial values on load
