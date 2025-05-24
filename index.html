@@ -3,7 +3,7 @@
     <title>Bitcoin Clicker Simulator</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-</head>
+</head> 
 <body>
     <button id="leaderboard-button">Leaderboard</button> 
 
@@ -120,8 +120,9 @@
     </div>
 
     <div id="leaderboard-overlay" style="display:none;">
-        <div id="leaderboard-content">
-            <h1>Leaderboard</h1>
+    <div id="leaderboard-content">
+        <h1>Leaderboard</h1>
+        <div id="leaderboard-table-scroll">
             <table id="leaderboard-table">
                 <thead>
                     <tr>
@@ -134,9 +135,9 @@
                     <!-- Leaderboard entries will be dynamically inserted here -->
                 </tbody>
             </table>
-            <button id="save-score-button">Save My Score</button>
         </div>
     </div>
+</div>
 
     <script src="script.js"></script>
 </body>
