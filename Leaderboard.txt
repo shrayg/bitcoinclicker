@@ -1,0 +1,3 @@
+Alice,10000
+Bob,9000
+Charlie,8000
